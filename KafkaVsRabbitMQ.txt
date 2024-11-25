@@ -1,0 +1,25 @@
+RabbitMQ Architecture
+
+General purpose message broker—uses variations of request/reply, point to point, and pub-sub communication patterns.
+
+Smart broker / dumb consumer model—consistent delivery of messages to consumers, at around the same speed as the broker monitors the consumer state.
+
+Mature platform—well supported, available for Java, client libraries, .NET, Ruby, node.js. Offers dozens of plugins.
+Communication—can be synchronous or asynchronous.
+
+Deployment scenarios—provides distributed deployment scenarios.
+
+Multi-node cluster to cluster federation—does not rely on external services, however, specific cluster formation plugins can use DNS, APIs, Consul, etc.  
+
+
+Apache Kafka Architecture
+
+High volume publish-subscribe messages and streams platform—durable, fast and scalable.
+
+Durable message store—like a log, run in a server cluster, which keeps streams of records in topics (categories).
+
+Messages—made up of a value, a key and a timestamp.
+
+Dumb broker / smart consumer model—does not try to track which messages are read by consumers and only keeps unread messages. Kafka keeps all messages for a set period of time.
+
+Requires external services to run—in some cases Apache Zookeeper.

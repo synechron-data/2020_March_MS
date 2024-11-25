@@ -1,0 +1,32 @@
+Broker Scale - The number of messages sent per second in the system.
+Data Persistency - The ability to recover messages.
+Consumer Capability – Whether the broker is capable of managing one-to-one and/or one-to-many consumers.
+
+
+RabbitMQ (AMQP) - Best when you need Complex Routing
+
+Scale: based on configuration and resources, the ballpark here is around 50K msg per second.
+
+Persistency: both persistent and transient messages are supported.
+
+One-to-one vs one-to-many consumers: both.
+
+
+
+Kafka - Used when Large Amounts of Data
+
+Scale: can send up to a millions messages per second.
+
+Persistency: yes.
+
+One-to-one vs one-to-many consumers: only one-to-many
+
+
+
+Redis - Best used for Short-lived Messages
+
+Scale: can send up to a million messages per second.
+
+Persistency: basically, no – it’s an in-memory datastore.
+
+One-to-one vs one-to-many consumers: both.
